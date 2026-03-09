@@ -35,8 +35,7 @@ public abstract class AbstractRepository<ID, E>
 
     @Override
     public E update(E entity) {
-        entities.put(getId(entity), entity);
-        return entity;
+        return save(entity);
     }
 
     protected abstract ID getId(E entity);
